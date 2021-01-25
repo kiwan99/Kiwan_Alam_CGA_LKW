@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiwan Alam CGA WS2020</title>
+</head>
+<body style="margin:0; overflow:hidden">
+
+<style>
+    #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+    }
+
+    #overlay > div {
+        color: #999999;
+        font-size: 14px;
+        text-align: center;
+        font-family: Monospace;
+    }
+
+    #overlay > div > button {
+        border: 0px;
+        height: 20px;
+        color: #ffffff;
+        background: transparent;
+        outline: 1px solid #ffffff;
+        cursor: pointer;
+    }
+</style>
+
+<div id="overlay">
+    <div>
+        <button id="startButton">CLICK TO START</button>
+        <p>Click the windshield to drive</p>
+    </div>
+</div>
+
+<div id="3d_content"></div>
+<script src="src/main.js"></script>
+</body>
+</html>
