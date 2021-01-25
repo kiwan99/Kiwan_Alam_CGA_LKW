@@ -1,5 +1,5 @@
 class Truck extends THREE.Group {
-    tweens;
+    tweens; //tweens als field für Zugriff auf Sounds in main.js
 
     constructor() {
         super();
@@ -48,7 +48,7 @@ class Truck extends THREE.Group {
 
 
     //Kühlergrill
-        var kühlergrillGeometry = new THREE.BoxGeometry(8, 3, 0.5);
+        var kühlergrillGeometry = new THREE.BoxGeometry(8, 3, 0.25);
         var kühlergrillMaterial = new THREE.MeshStandardMaterial({
             color: 0xD3D3D3,
             metalness: 0.5
@@ -67,11 +67,21 @@ class Truck extends THREE.Group {
             bumpMaterial
         ];
 
-        var kühlerGrill = new THREE.Mesh(kühlergrillGeometry, materialArray);
-        kühlerGrill.position.set(32, 4, 0);
-        kühlerGrill.rotation.y = -90 * DEG_TO_RAD;
-        kühlerGrill.castShadow = true;
-        truck.add(kühlerGrill);
+        var kühlergrill = new THREE.Mesh(kühlergrillGeometry, materialArray);
+        kühlergrill.position.set(32, 4, 0);
+        kühlergrill.rotation.y = -90 * DEG_TO_RAD;
+        kühlergrill.castShadow = true;
+
+
+        var kühlergrillrandGeometry = new THREE.BoxGeometry(9, 4, 0.1);
+        var kühlergrillrandMaterial = new THREE.MeshStandardMaterial({
+            color: 0x444444,
+            metalness: 0.5
+        });
+        var kühlergrillrand = new THREE.Mesh(kühlergrillrandGeometry, kühlergrillrandMaterial);
+        kühlergrill.add(kühlergrillrand);
+
+        truck.add(kühlergrill);
 
 
 
