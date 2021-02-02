@@ -35,7 +35,7 @@ function main() {
     scene.add(truck);
 
     var cones = new THREE.Group();
-    cones.position.set(185, -4.25, 0);
+    cones.position.set(185, -4.75, 0);
     cones.scale.set(0.05, 0.05, 0.05);
     var cone1 = new ConeFromFile();
     cone1.position.z = 100;
